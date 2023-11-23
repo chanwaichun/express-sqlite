@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var testRouter = require('./routes/users');
+var testRouter = require('./routes/test');
 
 var app = express();
 
@@ -19,6 +19,14 @@ app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
 // 静态资源
 app.use(express.static(path.join(__dirname, 'dist')));
+app.all('*', function (req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', '*');
+    res.header('Access-Control-Allow-Methods', '*');
+    res.header('Keep-Alive','timeout=60,max=1000')
+    res.header('Connection','keep-alive')
+    next();
+});
 app.use('/', indexRouter);
 app.use('/api/test', testRouter);
 

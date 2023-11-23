@@ -7,5 +7,6 @@ let { getPageBySql } = require('../dao/commonDao');
 router.post('/getApplicationV2', async (req, res, next) => {
    await getPageBySql(req,res)
 });
+// router.get('/info')
 
 module.exports = router;
