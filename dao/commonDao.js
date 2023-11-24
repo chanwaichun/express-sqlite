@@ -1,6 +1,7 @@
 const {sequelizeExecute} = require('../util')
 // const sequelize = require('@/utils/sequelize.js')
 module.exports = {
+
     getPageBySql: function (req, res) {
         return new Promise(async (resolve, reject) => {
             try {

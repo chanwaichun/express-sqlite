@@ -12,9 +12,12 @@
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
+    "express-jwt": "^8.4.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
+    "jsonwebtoken": "^9.0.2",
     "morgan": "~1.9.1",
+    "mysql2": "^3.6.5",
     "pg-hstore": "^2.3.4",
     "prettier": "^3.0.3",
     "sequelize": "^6.33.0",
@@ -24,6 +27,7 @@
   "devDependencies": {
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^11.0.0",
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "snowflake-id": "^1.1.0"
   }
 }
